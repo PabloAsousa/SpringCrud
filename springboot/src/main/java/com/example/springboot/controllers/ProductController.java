@@ -31,7 +31,7 @@ public class ProductController {
         BeanUtils.copyProperties(productRecordDto, productModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(productRepository.save(productModel));
     }
-
+//coment
     @GetMapping("/products")
     public ResponseEntity<List<ProductModel>> getAllProducts() {
         return ResponseEntity.status(HttpStatus.OK).body(productRepository.findAll());
